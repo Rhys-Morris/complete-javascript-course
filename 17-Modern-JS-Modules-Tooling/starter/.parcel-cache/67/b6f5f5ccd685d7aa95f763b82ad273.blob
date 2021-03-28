@@ -1,0 +1,3 @@
+require('lodash-es');
+var _shoppingCartJs = require('./shoppingCart.js');
+_shoppingCartJs.addToCart('pizza', 5);

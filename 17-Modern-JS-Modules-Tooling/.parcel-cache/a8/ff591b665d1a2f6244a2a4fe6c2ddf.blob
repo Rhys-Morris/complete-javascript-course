@@ -1,0 +1,20 @@
+var _node_modulesLodashEsCloneDeepJs = require('../node_modules/lodash-es/cloneDeep.js');
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+var _node_modulesLodashEsCloneDeepJsDefault = _parcelHelpers.interopDefault(_node_modulesLodashEsCloneDeepJs);
+const state = {
+  cart: [{
+    product: 'bread',
+    quantity: 5
+  }, {
+    product: 'pizza',
+    quantity: 3
+  }],
+  user: {
+    loggedIn: true
+  }
+};
+const stateClone = Object.assign({}, state);
+const stateDeepClone = _node_modulesLodashEsCloneDeepJsDefault.default(state);
+state.user.loggedIn = false;
+console.log(stateClone);
+console.log(stateDeepClone);

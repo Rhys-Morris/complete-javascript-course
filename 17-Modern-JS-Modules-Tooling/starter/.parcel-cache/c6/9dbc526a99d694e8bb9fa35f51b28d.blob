@@ -1,0 +1,4 @@
+require('lodash-es');
+var _shoppingCartJs = require('./shoppingCart.js');
+console.log('Importing module');
+_shoppingCartJs.addToCart('pizza', 5);

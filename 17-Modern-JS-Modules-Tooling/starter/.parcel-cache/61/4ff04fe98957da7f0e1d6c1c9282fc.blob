@@ -1,0 +1,26 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "addToCart", function () {
+  return addToCart;
+});
+_parcelHelpers.export(exports, "totalPrice", function () {
+  return totalPrice;
+});
+_parcelHelpers.export(exports, "totalQuantity", function () {
+  return totalQuantity;
+});
+// Exporting module
+console.log("Exporting module");
+// Variables declared in a module are scoped to the module. By default this means that all
+// top level variables are private within this module.
+const shippingCost = 10;
+const cart = [];
+const addToCart = function (product, quantity) {
+  cart.push({
+    product,
+    quantity
+  });
+  console.log(`${quantity} ${product} added to cart`);
+};
+const totalPrice = 237;
+const totalQuantity = 23;

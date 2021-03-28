@@ -1,0 +1,20 @@
+var _lodashEs = require('lodash-es');
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+var _lodashEsDefault = _parcelHelpers.interopDefault(_lodashEs);
+const state = {
+  cart: [{
+    product: 'bread',
+    quantity: 5
+  }, {
+    product: 'pizza',
+    quantity: 3
+  }],
+  user: {
+    loggedIn: true
+  }
+};
+const stateClone = Object.assign({}, state);
+const stateDeepClone = _lodashEsDefault.default(state);
+state.user.loggedIn = false;
+console.log(stateClone);
+console.log(stateDeepClone);
